@@ -45,9 +45,15 @@ public boolean isPalindrome(String s) {
             }
         }
         return end<=first;
+        // At first, we might not understand why we return like this.
+        // Suppose if two characters are different, if end>first, it cannot be palindrome
+        // The only possible situation where it is palidrome is that they are equal when total character is even
+        // or end is less than first when total character is odd. 
+        // Because if they are equal, we let them first++ and end--
     }
 public boolean isValid(char c){
      return Character.isDigit(c) || Character.isLetter(c);
+     // we can change it to Character.isLetterOrDigit(c);
 }
 
 // This method is easy to understand, just use regex to replace all the trash
